@@ -1,0 +1,33 @@
+/**
+ * _sidebar.scss
+ */
+
+/*
+Sidebar
+ */
+.widget-area {
+  /* Widgets */
+  .widget {
+    margin-bottom: 1.5rem;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    ul, ol {
+      padding-left: 1.25rem;
+    }
+    ul {
+      list-style-type: circle;
+    }
+  }
+}
+
+/*
+Widget: Search
+ */
+.widget_search {
+  .search-field {
+    margin-bottom: 0.5rem;
+  }
+}

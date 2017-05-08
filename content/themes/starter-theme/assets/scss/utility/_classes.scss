@@ -1,0 +1,85 @@
+/**
+ * _classes.scss
+ */
+
+/*
+Colors
+ */
+.button-color { color: $button-color; }
+.heading-color { color: $heading-color; }
+.link-color { color: $link-color; }
+.text-color { color: $text-color; }
+
+/*
+Font Weights
+ */
+.fw300 { font-weight: 300 !important; }
+.fw400 { font-weight: 400 !important; }
+.fw600 { font-weight: 600 !important; }
+.fw700 { font-weight: 700 !important; }
+
+/*
+Fonts
+ */
+.body-font { font-family: $body-font; }
+.heading-font { font-family: $heading-font; }
+
+/*
+Media Queries
+ */
+@media (max-width: $break-sm) {
+  .hidden-xs {
+    display: none !important;
+  }
+}
+@media (max-width: $break-md) {
+  .hidden-sm {
+    display: none !important;
+  }
+}
+@media (max-width: $break-lg) {
+  .hidden-md {
+    display: none !important;
+  }
+}
+
+@media (min-width: $break-sm) {
+  .visible-xs {
+    display: none !important;
+  }
+}
+@media (min-width: $break-md) {
+  .visible-sm {
+    display: none !important;
+  }
+}
+@media (min-width: $break-lg) {
+  .visible-md {
+    display: none !important;
+  }
+}
+
+/*
+Mixins
+ */
+.cover-bg {
+  @include bg-cover;
+}
+.darken-bg {
+  @include bg-darken;
+}
+.hover-lighten {
+  @include hover-lighten;
+}
+.screen-reader-text {
+  @extend .hide;
+}
+.vert-align, .val {
+  @include vert-align;
+}
+
+/*
+Widths
+ */
+.w50 { width: 50%; }
+.w100 { width: 100%; }

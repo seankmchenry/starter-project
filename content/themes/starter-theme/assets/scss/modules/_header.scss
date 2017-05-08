@@ -1,0 +1,23 @@
+/**
+ * _header.scss
+ */
+
+/*
+Header
+ */
+.site-header {}
+
+/*
+Nav: Main
+ */
+.main-navigation {
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &.toggled .nav-menu {
+    display: block !important;
+  }
+}

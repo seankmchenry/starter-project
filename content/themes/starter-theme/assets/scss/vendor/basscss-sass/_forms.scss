@@ -1,0 +1,50 @@
+
+// Converted Variables
+
+
+// Custom Media Query Variables
+
+
+/* Basscss Forms */
+
+label, .label {
+  font-size: $btn-font-size;
+  font-weight: $bold-font-weight;
+  display: block;
+  margin-bottom: .5rem;
+}
+
+input, .input {
+  font-family: inherit;
+  font-size: inherit;
+  display: block;
+  width: 100%;
+  height: 2.5rem;
+  padding: .5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+select, .select {
+  font-family: inherit;
+  font-size: inherit;
+  display: block;
+  width: 100%;
+  height: 2.5rem;
+  padding: .5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+textarea, .textarea {
+  font-family: inherit;
+  font-size: inherit;
+  display: block;
+  width: 100%;
+  padding: .5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}

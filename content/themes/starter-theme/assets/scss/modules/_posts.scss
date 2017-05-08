@@ -1,0 +1,38 @@
+/**
+ * _posts.scss
+ */
+
+/*
+Single
+ */
+.single-post {}
+
+/*
+Entry Header
+ */
+.entry-header {
+  margin-bottom: $margin-p;
+}
+.entry-meta {
+  time.updated {
+    @extend .hide;
+  }
+}
+
+/*
+Entry Content
+ */
+.entry-content {
+  // remove top margins
+  > h1, > h2, > h3, > h4, > p {
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+// disable .p1 class
+.basscss {
+  .entry-content .p1 {
+    padding: 0;
+  }
+}

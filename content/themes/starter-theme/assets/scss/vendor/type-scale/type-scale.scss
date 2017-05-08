@@ -1,0 +1,60 @@
+/**
+ * type-scale.scss
+ */
+
+// font size variables
+$h1: 2.074rem;
+$h2: 1.728rem;
+$h3: 1.44rem;
+$h4: 1.2rem;
+$small: 0.833em;
+
+// type styles
+html {
+  font-size: $xs-font-size;
+
+  @include break-sm {
+    font-size: $sm-font-size;
+  }
+  @include break-lg {
+    font-size: $lg-font-size;
+  }
+}
+
+body {
+  font-family: $body-font;
+  font-weight: $normal-font-weight;
+  line-height: $body-line-height;
+  color: $text-color;
+}
+
+p, .p {
+  font-size: 1rem;
+  margin-bottom: $margin-p;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4 {
+  margin: 1.414rem 0 0.5rem;
+  font-weight: inherit;
+  line-height: 1.2;
+  // color: $heading-color;
+}
+h1, h2, h3, h4 {
+  font-family: $heading-font;
+}
+
+h1, .h1 {
+  margin-top: 0;
+  font-size: $h1;
+}
+
+h2, .h2 { font-size: $h2; }
+
+h3, .h3 { font-size: $h3; }
+
+h4, .h4 { font-size: $h4; }
+
+small, .small { font-size: $small; }

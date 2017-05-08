@@ -1,0 +1,34 @@
+# Junk files
+.DS_Store
+Desktop.ini
+Thumbs.db
+
+# Config files
+.env
+.htaccess
+
+# Composer folders
+packages/
+
+# Log files
+debug.log
+npm-debug.log
+
+
+# WordPress folders
+wp/
+content/plugins/*
+!content/plugins/index.php
+content/upgrade
+content/uploads/*
+!content/uploads/index.php
+
+# NPM folder
+node_modules
+
+# Main scripts/styles
+main.css
+main.min.css
+main.min.css.map
+main.js
+main.min.js

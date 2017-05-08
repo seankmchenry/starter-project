@@ -1,0 +1,37 @@
+{
+  "name": "seankmchenry/_s-starter",
+  "description": "Starter project for WordPress sites",
+  "authors": [
+    {
+      "name": "Sean McHenry",
+      "email": "seankmchenry@gmail.com"
+    }
+  ],
+  "config": {
+    "vendor-dir": "packages"
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    }
+  ],
+  "require": {
+    "composer/installers": "~1.2.0",
+    "vlucas/phpdotenv": "^2.0.1",
+    "johnpbloch/wordpress": "4.7.4",
+    "oscarotero/env": "^1.0",
+    "roots/wp-password-bcrypt": "1.0.0",
+    "roots/soil": "3.7.1",
+    "wpackagist-plugin/force-regenerate-thumbnails": "^2.0.6",
+    "wpackagist-plugin/imsanity": "^2.3.8"
+  },
+  "extra": {
+    "installer-paths": {
+      "content/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+      "content/plugins/{$name}/": ["type:wordpress-plugin"],
+      "content/themes/{$name}/": ["type:wordpress-theme"]
+    },
+    "wordpress-install-dir": "wp"
+  }
+}

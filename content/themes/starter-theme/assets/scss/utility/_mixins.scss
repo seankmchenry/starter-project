@@ -1,0 +1,136 @@
+/**
+ * _mixins.scss
+ */
+
+/*
+Animation
+ */
+@mixin animate($transition: all, $time: .25s) {
+  transition: $transition $time ease;
+}
+@mixin no-animate() {
+  transition: none;
+}
+
+/*
+Backgrounds
+ */
+@mixin bg-cover($position: 50% 50%) {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: $position;
+}
+@mixin bg-color($color: $link-color, $hover: darken($link-color, 10%)) {
+  background-color: $color;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $hover;
+  }
+}
+@mixin bg-darken($color: black, $opacity: 0.2) {
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color, $opacity);
+  }
+}
+
+/*
+Clearfix
+ */
+@mixin clearfix() {
+  &:after,
+  &:before {
+    content: "";
+    display: table;
+    table-layout: fixed;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+/*
+Font Smoothing
+ */
+@mixin font-smoothing($value: on) {
+  @if ($value == on) {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  @else {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+  }
+}
+
+/*
+Hover Effects
+ */
+@mixin hover-lighten($opacity: 0.85) {
+  -webkit-backface-visibility: hidden;
+  @include animate(opacity);
+
+  &:hover,
+  &:focus {
+    opacity: $opacity;
+  }
+}
+
+/*
+Link Color
+ */
+@mixin link-color($color: $link-color, $hover: darken($link-color, 10%)) {
+  color: $color;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $hover;
+  }
+}
+
+/*
+Media queries
+ */
+@mixin break-xs {
+  @media (min-width: $break-xs) {
+    @content;
+  }
+}
+@mixin break-sm {
+  @media (min-width: $break-sm) {
+    @content;
+  }
+}
+@mixin break-md {
+  @media (min-width: $break-md) {
+    @content;
+  }
+}
+@mixin break-lg {
+  @media (min-width: $break-lg) {
+    @content;
+  }
+}
+@mixin break-xl {
+  @media (min-width: $break-xl) {
+    @content;
+  }
+}
+
+/*
+Vertical centering
+ */
+@mixin vert-align {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}

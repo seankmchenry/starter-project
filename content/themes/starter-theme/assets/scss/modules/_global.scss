@@ -1,0 +1,57 @@
+/**
+ * _global.scss
+ */
+
+/*
+Global
+ */
+html {
+  box-sizing: border-box;
+  overflow-y: scroll;
+  background-color: $text-color;
+  @include font-smoothing(on);
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/*
+Elements
+ */
+a {
+  text-decoration: none;
+  @include link-color;
+  @include animate(color);
+
+  &:focus {
+    outline: thin dotted $border-color;
+  }
+  &:hover,
+  &:active {
+    outline: 0;
+  }
+}
+b, strong {
+  font-weight: $bold-font-weight;
+}
+
+/*
+Top-Level
+ */
+.site {
+  background-color: white;
+}
+.site-content {
+  padding: 1.75rem 0;
+
+  @include break-sm {
+    padding: 2rem 0;
+  }
+  @include break-md {
+    padding: 2.25rem 0;
+  }
+}

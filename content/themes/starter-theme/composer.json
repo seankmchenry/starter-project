@@ -1,0 +1,34 @@
+{
+  "name": "seankmchenry/_s-starter",
+  "description": "Starter theme for WordPress sites",
+  "type":"wordpress-theme",
+  "minimum-stability" : "stable",
+  "config": {
+    "vendor-dir": "packages"
+  },
+  "authors": [
+    {
+      "name": "Sean McHenry",
+      "email": "seankmchenry@gmail.com"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    }
+  ],
+  "extra": {
+  	"installer-paths": {
+      "../../plugins/{$name}/": [
+        "wpackagist-plugin/*",
+        "type:wordpress-plugin"
+      ]
+  	}
+	},
+  "require": {
+    "jjgrainger/posttypes": "^1.0",
+    "tgmpa/tgm-plugin-activation": "^2.6",
+    "roots/soil": "3.7.1"
+  }
+}
