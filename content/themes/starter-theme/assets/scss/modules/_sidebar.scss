@@ -5,21 +5,23 @@
 /*
 Sidebar
  */
-.widget-area {
-  /* Widgets */
-  .widget {
-    margin-bottom: 1.5rem;
+.widget-area {}
 
-    &:last-of-type {
-      margin-bottom: 0;
-    }
+/*
+Widgets
+ */
+.widget-area .widget {
+  margin-bottom: 1.5rem;
 
-    ul, ol {
-      padding-left: 1.25rem;
-    }
-    ul {
-      list-style-type: circle;
-    }
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  ul, ol {
+    padding-left: 1.25rem;
+  }
+  ul {
+    list-style-type: circle;
   }
 }
 
