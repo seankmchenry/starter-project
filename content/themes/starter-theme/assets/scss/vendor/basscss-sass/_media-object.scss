@@ -4,6 +4,12 @@
 $space-1: .5rem !default;
 $media-object-space: $space-1 !default;
 
+// Custom Media Query Variables
+
+$breakpoint-sm: '(min-width: #{$break-sm})' !default;
+$breakpoint-md: '(min-width: #{$break-md})' !default;
+$breakpoint-lg: '(min-width: #{$break-lg})' !default;
+
 /* Basscss Media Object */
 
 .media,
@@ -36,14 +42,14 @@ $media-object-space: $space-1 !default;
   flex: 1 1 auto;
 }
 
-@include break-sm {
+@media #{$breakpoint-sm} {
   .sm-media { display: flex }
 }
 
-@include break-md {
+@media #{$breakpoint-md} {
   .md-media { display: flex }
 }
 
-@include break-lg {
+@media #{$breakpoint-lg} {
   .lg-media { display: flex }
 }

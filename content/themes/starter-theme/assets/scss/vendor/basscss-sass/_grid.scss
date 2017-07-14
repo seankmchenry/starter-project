@@ -1,4 +1,13 @@
 
+// Converted Variables
+
+
+// Custom Media Query Variables
+
+$breakpoint-sm: '(min-width: #{$break-sm})' !default;
+$breakpoint-md: '(min-width: #{$break-md})' !default;
+$breakpoint-lg: '(min-width: #{$break-lg})' !default;
+
 /* Basscss Grid */
 
 .col {
@@ -59,7 +68,7 @@
   width: 100%;
 }
 
-@include break-sm {
+@media #{$breakpoint-sm} {
 
   .sm-col {
     float: left;
@@ -121,7 +130,7 @@
 
 }
 
-@include break-md {
+@media #{$breakpoint-md} {
 
   .md-col {
     float: left;
@@ -183,7 +192,7 @@
 
 }
 
-@include break-lg {
+@media #{$breakpoint-lg} {
 
   .lg-col {
     float: left;

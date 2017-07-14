@@ -1,10 +1,10 @@
 
 // Converted Variables
 
-$width-1: 24rem !default;
-$width-2: 32rem !default;
-$width-3: 48rem !default;
-$width-4: 64rem !default;
+$width-1: $break-xs !default;
+$width-2: $break-sm !default;
+$width-3: $break-md !default;
+$width-4: $break-lg !default;
 
 // Custom Media Query Variables
 

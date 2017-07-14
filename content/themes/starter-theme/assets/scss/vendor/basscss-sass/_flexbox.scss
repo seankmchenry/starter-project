@@ -1,15 +1,25 @@
 
+// Converted Variables
+
+
+// Custom Media Query Variables
+
+$breakpoint-sm: '(min-width: #{$break-sm})' !default;
+$breakpoint-md: '(min-width: #{$break-md})' !default;
+$breakpoint-lg: '(min-width: #{$break-lg})' !default;
+
+
 .flex { display: flex }
 
-@include break-sm {
+@media #{$breakpoint-sm} {
   .sm-flex { display: flex }
 }
 
-@include break-md {
+@media #{$breakpoint-md} {
   .md-flex { display: flex }
 }
 
-@include break-lg {
+@media #{$breakpoint-lg} {
   .lg-flex { display: flex }
 }
 
