@@ -66,7 +66,7 @@ function _s_custom_image_sizes() {
   update_option( 'large_crop', 1 );
 
   update_option( 'medium_size_w', 600 );
-  update_option( 'medium_size_h', 475 );
+  update_option( 'medium_size_h', 450 );
   update_option( 'medium_crop', 1 );
 
   update_option( 'thumbnail_size_w', 200 );

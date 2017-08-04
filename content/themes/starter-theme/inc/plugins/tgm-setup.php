@@ -8,16 +8,16 @@ Register the required plugins for this theme.
  */
 function _s_register_required_plugins() {
   /*
-  Local plugins
+  Development
    */
-  $plugins = array(
+  $development = array(
     array(
       'name' => 'ACF-PHP-Recovery',
       'slug' => 'ACF-PHP-Recovery',
-      'source' => 'https://github.com/seankmchenry/ACF-PHP-Recovery/archive/master.zip',
+      'source' => 'https://github.com/ecmdesign/ACF-PHP-Recovery/archive/master.zip',
       'required' => true,
       'force_activation' => true,
-      'external_url' => 'https://github.com/seankmchenry/ACF-PHP-Recovery'
+      'external_url' => 'https://github.com/ecmdesign/ACF-PHP-Recovery'
     ),
     array(
       'name' => 'Advanced Custom Fields Pro',
@@ -50,18 +50,24 @@ function _s_register_required_plugins() {
   );
 
   /*
-  Remote plugins
+  Staging
    */
-  $plugins_remote = array(
-    array(
-      'name' => 'BackUpWordPress',
-      'slug' => 'backupwordpress',
-      'required' => true,
-      'force_activation' => true
-    ),
+  $staging = array(
     array(
       'name' => 'Loginizer',
       'slug' => 'loginizer',
+      'required' => true,
+      'force_activation' => true
+    )
+  );
+
+  /*
+  Production
+   */
+  $production = array(
+    array(
+      'name' => 'BackUpWordPress',
+      'slug' => 'backupwordpress',
       'required' => true,
       'force_activation' => true
     ),
@@ -79,10 +85,13 @@ function _s_register_required_plugins() {
     )
   );
 
-  // merge the local and remote plugin
-  // arrays if we're not in dev environment
-  if ( WP_ENV !== 'development' ) {
-    $plugins = array_merge( $plugins, $plugins_remote );
+  // set plugins array based on environment
+  if ( WP_ENV === 'development' ) {
+    $plugins = $development;
+  } elseif ( WP_ENV === 'staging' ) {
+    $plugins = array_merge( $development, $staging );
+  } elseif ( WP_ENV === 'production' ) {
+    $plugins = array_merge( $development, $staging, $production );
   }
 
   /*
@@ -108,4 +117,4 @@ add_action( 'tgmpa_register', '_s_register_required_plugins' );
 /*
 Reset install notice if previously dismissed
  */
-TGM_Plugin_Activation::get_instance()->update_dismiss();
+// TGM_Plugin_Activation::get_instance()->update_dismiss();
