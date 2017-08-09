@@ -40,6 +40,12 @@ function _s_register_required_plugins() {
       'force_activation' => true
     ),
     array(
+      'name' => 'Simple Page Sidebars',
+      'slug' => 'simple-page-sidebars',
+      'required' => true,
+      'force_activation' => true
+    ),
+    array(
       'name' => 'Soil',
       'slug' => 'soil',
       'source' => 'https://github.com/roots/soil/archive/master.zip',
@@ -56,6 +62,12 @@ function _s_register_required_plugins() {
     array(
       'name' => 'Loginizer',
       'slug' => 'loginizer',
+      'required' => true,
+      'force_activation' => true
+    ),
+    array(
+      'name' => 'Ninja Forms – The Easy and Powerful Forms Builder',
+      'slug' => 'ninja-forms',
       'required' => true,
       'force_activation' => true
     )

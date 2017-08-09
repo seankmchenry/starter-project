@@ -96,3 +96,11 @@ function _s_get_image_alt( $post_id ) {
   $alt = get_post_meta( $thumb_id, '_wp_attachment_image_alt', true );
   return $alt;
 }
+
+/**
+ * ACF Google Maps API Key
+ */
+function _s_acf_gmaps_api_key() {
+  acf_update_setting( 'google_api_key', '' );
+}
+add_action( 'acf/init', '_s_acf_gmaps_api_key' );
