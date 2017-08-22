@@ -15,17 +15,17 @@ function _s_register_required_plugins() {
       'name' => 'ACF-PHP-Recovery',
       'slug' => 'ACF-PHP-Recovery',
       'source' => 'https://github.com/ecmdesign/ACF-PHP-Recovery/archive/master.zip',
+      'external_url' => 'https://github.com/ecmdesign/ACF-PHP-Recovery',
       'required' => true,
-      'force_activation' => true,
-      'external_url' => 'https://github.com/ecmdesign/ACF-PHP-Recovery'
+      'force_activation' => true
     ),
     array(
       'name' => 'Advanced Custom Fields Pro',
       'slug' => 'advanced-custom-fields-pro',
       'source' => 'https://github.com/ecmdesign/advanced-custom-fields-pro/archive/master.zip',
+      'external_url' => 'https://github.com/ecmdesign/advanced-custom-fields-pro',
       'required' => true,
-      'force_activation' => true,
-      'external_url' => 'https://github.com/ecmdesign/advanced-custom-fields-pro'
+      'force_activation' => true
     ),
     array(
       'name' => 'Force Regenerate Thumbnails',
@@ -49,9 +49,9 @@ function _s_register_required_plugins() {
       'name' => 'Soil',
       'slug' => 'soil',
       'source' => 'https://github.com/roots/soil/archive/master.zip',
+      'external_url' => 'https://github.com/roots/soil',
       'required' => true,
-      'force_activation' => true,
-      'external_url' => 'https://github.com/roots/soil'
+      'force_activation' => true
     )
   );
 

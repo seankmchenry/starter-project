@@ -79,6 +79,25 @@ function _s_custom_image_sizes() {
 add_action( 'init', '_s_custom_image_sizes' );
 
 /**
+ * Featured image column for posts
+ *
+ * @link https://codex.wordpress.org/Plugin_API/Filter_Reference/manage_posts_columns
+ */
+function _s_add_feat_img_column( $columns ) {
+  return array_merge( $columns,
+    array( 'feat_img' => __( 'Featured Image' ) )
+  );
+}
+add_filter( 'manage_post_posts_columns', '_s_add_feat_img_column' );
+
+function _s_feat_img_column( $column, $post_id ) {
+  if ( ( $column === 'feat_img' ) && has_post_thumbnail( $post_id ) ) {
+    the_post_thumbnail( array( 64, 64 ) );
+  }
+}
+add_action( 'manage_post_posts_custom_column', '_s_feat_img_column', 10, 2 );
+
+/**
  * Allow SVG upload through media library
  */
 function _s_allow_svg_upload( $mimes ) {
@@ -87,15 +106,6 @@ function _s_allow_svg_upload( $mimes ) {
   return $mimes;
 }
 add_filter( 'upload_mimes', '_s_allow_svg_upload', 10, 1 );
-
-/**
- * Get post thumbnail image alt text
- */
-function _s_get_image_alt( $post_id ) {
-  $thumb_id = get_post_thumbnail_id( $post_id );
-  $alt = get_post_meta( $thumb_id, '_wp_attachment_image_alt', true );
-  return $alt;
-}
 
 /**
  * ACF Google Maps API Key
