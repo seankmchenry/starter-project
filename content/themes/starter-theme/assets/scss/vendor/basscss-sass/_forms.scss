@@ -7,14 +7,29 @@
 
 /* Basscss Forms */
 
-label, .label {
+label,
+.label {
   font-size: $btn-font-size;
   font-weight: $bold-font-weight;
   display: block;
   margin-bottom: .5rem;
 }
 
-input, .input {
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+.input {
   font-family: inherit;
   font-size: inherit;
   display: block;
@@ -27,7 +42,8 @@ input, .input {
   border-radius: 3px;
 }
 
-select, .select {
+select,
+.select {
   font-family: inherit;
   font-size: inherit;
   display: block;
@@ -40,7 +56,8 @@ select, .select {
   border-radius: 3px;
 }
 
-textarea, .textarea {
+textarea,
+.textarea {
   font-family: inherit;
   font-size: inherit;
   display: block;
