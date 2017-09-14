@@ -1,3 +1,33 @@
 /**
  * _vendor.scss
  */
+
+/*
+Ninja Forms
+ */
+.nf-form-title {
+  display: none;
+}
+.nf-form-wrap {
+  .nf-before-form-content {
+    @extend .hide;
+  }
+  .nf-form-content {
+    input, textarea, .nf-field,
+    .label-above .nf-field-label {
+      margin-bottom: 0;
+    }
+    .list-radio-wrap li label,
+    .list-radio-wrap li input {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .nf-field-container {
+      margin-bottom: $margin-p;
+
+      &.submit-container {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

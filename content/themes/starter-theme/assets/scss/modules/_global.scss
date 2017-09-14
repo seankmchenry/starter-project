@@ -20,6 +20,23 @@ body {
 }
 
 /*
+Top-Level
+ */
+.site {
+  background-color: white;
+}
+.site-content {
+  padding: 1.75rem 0;
+
+  @include break-sm {
+    padding: 2rem 0;
+  }
+  @include break-md {
+    padding: 2.25rem 0;
+  }
+}
+
+/*
 Elements
  */
 a {
@@ -40,18 +57,38 @@ b, strong {
 }
 
 /*
-Top-Level
+Forms
  */
-.site {
-  background-color: white;
+label {
+  @extend .label;
 }
-.site-content {
-  padding: 1.75rem 0;
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"] {
+  @extend .input;
+}
+select {
+  @extend .select;
+}
+textarea {
+  @extend .textarea;
+}
 
-  @include break-sm {
-    padding: 2rem 0;
-  }
-  @include break-md {
-    padding: 2.25rem 0;
-  }
+/*
+Buttons
+ */
+button,
+input[type="submit"] {
+  @extend .btn, .btn-primary;
 }
