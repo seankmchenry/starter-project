@@ -89,6 +89,7 @@ textarea {
 Buttons
  */
 button,
+input[type="button"],
 input[type="submit"] {
   @extend .btn, .btn-primary;
 }

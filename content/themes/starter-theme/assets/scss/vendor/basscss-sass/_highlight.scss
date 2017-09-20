@@ -69,7 +69,7 @@ $hljs-chunk: $silver !default;
 .hljs-request,
 .hljs-status {
   color: $hljs-keyword;
-  font-weight: bold;
+  font-weight: $bold-font-weight;
 }
 
 .hljs-number,
@@ -90,7 +90,7 @@ $hljs-chunk: $silver !default;
 .hljs-id,
 .scss .hljs-preprocessor {
   color: $hljs-title;
-  font-weight: bold;
+  font-weight: $bold-font-weight;
 }
 
 .hljs-list .hljs-keyword,
@@ -103,7 +103,7 @@ $hljs-chunk: $silver !default;
 .vhdl .hljs-literal,
 .tex .hljs-command {
   color: $hljs-type;
-  font-weight: bold;
+  font-weight: $bold-font-weight;
 }
 
 .hljs-tag,
@@ -145,7 +145,7 @@ $hljs-chunk: $silver !default;
 .hljs-shebang,
 .hljs-cdata {
   color: $hljs-preprocessor;
-  font-weight: bold;
+  font-weight: $bold-font-weight;
 }
 
 .hljs-deletion {

@@ -70,7 +70,7 @@ $hljs-chunk: $gray !default;
 .highlight-dark .hljs-request,
 .highlight-dark .hljs-status {
   color: $hljs-keyword;
-  font-weight: bold;
+  font-weight: $bold-font-weight;
 }
 
 .highlight-dark .hljs-number,
@@ -91,7 +91,7 @@ $hljs-chunk: $gray !default;
 .hljs-id,
 .scss .hljs-preprocessor {
   color: $hljs-title;
-  font-weight: bold;
+  font-weight: $bold-font-weight;
 }
 
 .highlight-dark .hljs-list .hljs-keyword,
@@ -104,7 +104,7 @@ $hljs-chunk: $gray !default;
 .highlight-dark .vhdl .hljs-literal,
 .highlight-dark .tex .hljs-command {
   color: $hljs-type;
-  font-weight: bold;
+  font-weight: $bold-font-weight;
 }
 
 .highlight-dark .hljs-tag,
@@ -146,7 +146,7 @@ $hljs-chunk: $gray !default;
 .highlight-dark .hljs-shebang,
 .highlight-dark .hljs-cdata {
   color: $hljs-preprocessor;
-  font-weight: bold;
+  font-weight: $bold-font-weight;
 }
 
 .highlight-dark .hljs-deletion {

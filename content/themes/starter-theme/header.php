@@ -17,7 +17,7 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 
 <!-- Web fonts -->
-<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Libre+Franklin:300,400,400i,600,600i" rel="stylesheet">
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

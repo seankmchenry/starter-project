@@ -6,27 +6,36 @@
 Ninja Forms
  */
 .nf-form-title {
-  display: none;
+  @extend .hide;
 }
 .nf-form-wrap {
   .nf-before-form-content {
     @extend .hide;
   }
   .nf-form-content {
+    label {
+      margin-bottom: 0.5rem;
+      font-weight: $bold-font-weight;
+    }
     input, textarea, .nf-field,
     .label-above .nf-field-label {
       margin-bottom: 0;
-    }
-    .list-radio-wrap li label,
-    .list-radio-wrap li input {
-      display: inline-block;
-      vertical-align: middle;
     }
     .nf-field-container {
       margin-bottom: $margin-p;
 
       &.submit-container {
         margin-bottom: 0;
+      }
+    }
+    .list-radio-wrap,
+    .list-checkbox-wrap {
+      label, input {
+        display: inline-block;
+        vertical-align: middle;
+      }
+      li label {
+        font-weight: $normal-font-weight;
       }
     }
   }
