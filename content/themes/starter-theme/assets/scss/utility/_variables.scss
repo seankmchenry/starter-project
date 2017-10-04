@@ -14,9 +14,8 @@ $body-font: $sans-serif;
 $heading-font: $sans-serif;
 
 /* Sizes */
-$xs-font-size: 14px !default;
-$sm-font-size: 15px !default;
-$lg-font-size: 16px !default;
+$xs-font-size: 15px !default;
+$md-font-size: 16px !default;
 
 $btn-font-size: 0.9375rem;
 $body-line-height: 1.45;
@@ -58,11 +57,11 @@ $twitter: #4FA6DD;
 /*
 Breakpoints
  */
-$break-xs: 35rem;
-$break-sm: 48rem;
-$break-md: 62rem;
-$break-lg: 75rem;
-$break-xl: 90rem;
+$break-xs: 35rem; // 560px
+$break-sm: 48rem; // 768px
+$break-md: 62rem; // 992px
+$break-lg: 75rem; // 1200px
+$break-xl: 90rem; // 1440px
 
 // grid gutter width
 $gutter-width: 1rem !default;

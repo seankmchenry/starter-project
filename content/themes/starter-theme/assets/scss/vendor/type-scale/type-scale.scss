@@ -13,11 +13,8 @@ $small: 0.833em;
 html {
   font-size: $xs-font-size;
 
-  @include break-sm {
-    font-size: $sm-font-size;
-  }
-  @include break-lg {
-    font-size: $lg-font-size;
+  @include break-md {
+    font-size: $md-font-size;
   }
 }
 

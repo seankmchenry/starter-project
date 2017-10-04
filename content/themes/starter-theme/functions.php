@@ -38,11 +38,6 @@ require get_template_directory() . '/inc/extras.php';
 require get_template_directory() . '/inc/plugins/soil-setup.php';
 
 /**
- * Advanced Custom Fields
- */
-require get_template_directory() . '/inc/plugins/acf-setup.php';
-
-/**
  * CPT setup
  */
 require get_template_directory() . '/inc/plugins/cpt-setup.php';

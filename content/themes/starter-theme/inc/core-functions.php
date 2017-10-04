@@ -58,6 +58,29 @@ function _s_add_acf_options_page() {
 add_action( 'init', '_s_add_acf_options_page' );
 
 /*
+Hide ACF fields dashboard
+ */
+function _s_hide_acf_dashboard() {
+  // check if this is my user account
+  if ( wp_get_current_user()->user_login === 'sean' ) {
+    return;
+  }
+  define( 'ACF_LITE' , true );
+}
+add_action( 'admin_init', '_s_hide_acf_dashboard' );
+
+/*
+Update ACF Local JSON save point
+ */
+function _s_acf_json_save_point( $path ) {
+  // set new path
+  $path = get_stylesheet_directory() . '/inc/acf-json';
+  // return path
+  return $path;
+}
+add_filter( 'acf/settings/save_json', '_s_acf_json_save_point' );
+
+/*
 Add and update image sizes
  */
 function _s_custom_image_sizes() {

@@ -5,7 +5,10 @@
 /*
 Footer
  */
-.site-footer {}
+.site-footer {
+  padding: 0.5rem 0;
+  font-size: $btn-font-size;
+}
 
 /*
 Sticky Footer
