@@ -5,10 +5,18 @@
 /*
 Colors
  */
-.button-color { color: $button-color; }
-.heading-color { color: $heading-color; }
-.link-color { color: $link-color; }
-.text-color { color: $text-color; }
+.button-color {
+  color: $button-color;
+}
+.heading-color {
+  color: $heading-color;
+}
+.link-color {
+  color: $link-color;
+}
+.text-color {
+  color: $text-color;
+}
 
 /*
 Font Weights
@@ -21,8 +29,12 @@ Font Weights
 /*
 Fonts
  */
-.body-font { font-family: $body-font; }
-.heading-font { font-family: $heading-font; }
+.body-font {
+  font-family: $body-font;
+}
+.heading-font {
+  font-family: $heading-font;
+}
 
 /*
 Media Queries
@@ -77,9 +89,3 @@ Mixins
 .vert-align, .val {
   @include vert-align;
 }
-
-/*
-Widths
- */
-.w50 { width: 50%; }
-.w100 { width: 100%; }

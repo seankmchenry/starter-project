@@ -70,17 +70,6 @@ function _s_hide_acf_dashboard() {
 add_action( 'admin_init', '_s_hide_acf_dashboard' );
 
 /*
-Update ACF Local JSON save point
- */
-function _s_acf_json_save_point( $path ) {
-  // set new path
-  $path = get_stylesheet_directory() . '/inc/acf-json';
-  // return path
-  return $path;
-}
-add_filter( 'acf/settings/save_json', '_s_acf_json_save_point' );
-
-/*
 Add and update image sizes
  */
 function _s_custom_image_sizes() {
