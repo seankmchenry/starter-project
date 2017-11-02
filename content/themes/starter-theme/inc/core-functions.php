@@ -120,9 +120,22 @@ function _s_allow_svg_upload( $mimes ) {
 add_filter( 'upload_mimes', '_s_allow_svg_upload', 10, 1 );
 
 /**
+ * Show page template in header
+ */
+function _s_page_template_header() {
+  if ( is_super_admin() ) {
+    global $template;
+    echo '<pre class="bg-silver m0">';
+    print_r( $template );
+    echo '</pre>';
+  }
+}
+// add_action( 'wp_head', '_s_page_template_header' );
+
+/**
  * ACF Google Maps API Key
  */
 function _s_acf_gmaps_api_key() {
   acf_update_setting( 'google_api_key', '' );
 }
-add_action( 'acf/init', '_s_acf_gmaps_api_key' );
+// add_action( 'acf/init', '_s_acf_gmaps_api_key' );
