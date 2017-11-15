@@ -34,39 +34,39 @@ $black: #111 !default;
 
 */
 
-.black  { color: $black }
+.black  { color: $black !important }
 
-.gray   { color: $gray }
+.gray   { color: $gray !important }
 
-.silver { color: $silver }
+.silver { color: $silver !important }
 
-.white  { color: $white }
+.white  { color: $white !important }
 
-.aqua  { color: $aqua }
+.aqua  { color: $aqua !important }
 
-.blue  { color: $blue }
+.blue  { color: $blue !important }
 
-.navy  { color: $navy }
+.navy  { color: $navy !important }
 
-.teal  { color: $teal }
+.teal  { color: $teal !important }
 
-.green { color: $green }
+.green { color: $green !important }
 
-.olive { color: $olive }
+.olive { color: $olive !important }
 
-.lime  { color: $lime }
+.lime  { color: $lime !important }
 
-.yellow  { color: $yellow }
+.yellow  { color: $yellow !important }
 
-.orange  { color: $orange }
+.orange  { color: $orange !important }
 
-.red     { color: $red }
+.red     { color: $red !important }
 
-.fuchsia { color: $fuchsia }
+.fuchsia { color: $fuchsia !important }
 
-.purple  { color: $purple }
+.purple  { color: $purple !important }
 
-.maroon  { color: $maroon }
+.maroon  { color: $maroon !important }
 
 .color-inherit { color: inherit }
 
