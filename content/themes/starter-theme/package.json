@@ -5,7 +5,7 @@
   "homepage": "https://github.com/seankmchenry",
   "repository": {
     "type": "git",
-    "url": "git@github.com:seankmchenry/_s-starter.git"
+    "url": "git@gitlab.com:seankmchenry/_s-starter.git"
   },
   "license": "MIT",
   "devDependencies": {
