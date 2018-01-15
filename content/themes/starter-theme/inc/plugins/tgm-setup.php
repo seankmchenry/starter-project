@@ -70,16 +70,22 @@ function _s_register_required_plugins() {
    */
   $production = array(
     array(
+      'name' => 'Autoptimize',
+      'slug' => 'autoptimize',
+      'required' => true,
+      'force_activation' => true
+    ),
+    array(
       'name' => 'BackUpWordPress',
       'slug' => 'backupwordpress',
       'required' => true,
       'force_activation' => true
     ),
     array(
-      'name' => 'W3 Total Cache',
-      'slug' => 'w3-total-cache',
+      'name' => 'Cache Enabler',
+      'slug' => 'cache-enabler',
       'required' => true,
-      'force_activation' => false
+      'force_activation' => true
     ),
     array(
       'name' => 'Yoast SEO',

@@ -14,7 +14,7 @@ $darken-3: rgba(0, 0, 0, .25) !default;
 /* Basscss Btn Primary */
 
 .btn-primary {
-  color: $_button-color !important;
+  color: $_button-color;
   background-color: $button-background-color;
   border-radius: $border-radius;
 }
@@ -25,6 +25,12 @@ $darken-3: rgba(0, 0, 0, .25) !default;
 
 .btn-primary:active {
   box-shadow: inset 0 0 0 20rem $darken-2, inset 0 3px 4px 0 $darken-3, 0 0 1px $darken-2;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  color: $_button-color;
 }
 
 .btn-primary:disabled,
