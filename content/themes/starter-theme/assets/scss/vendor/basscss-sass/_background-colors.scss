@@ -34,6 +34,8 @@ $black: #111 !default;
 
 */
 
+.basscss {
+
 .bg-black  { background-color: $black }
 
 .bg-gray   { background-color: $gray }
@@ -67,3 +69,5 @@ $black: #111 !default;
 .bg-purple  { background-color: $purple }
 
 .bg-maroon  { background-color: $maroon }
+
+}

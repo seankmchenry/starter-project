@@ -34,6 +34,8 @@ $black: #111 !default;
 
 */
 
+.basscss {
+
 .black  { color: $black !important }
 
 .gray   { color: $gray !important }
@@ -71,3 +73,5 @@ $black: #111 !default;
 .color-inherit { color: inherit }
 
 .muted { opacity: .5 }
+
+}

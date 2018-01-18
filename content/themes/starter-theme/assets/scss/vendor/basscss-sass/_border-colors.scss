@@ -34,6 +34,8 @@ $black: #111 !default;
 
 */
 
+.basscss {
+
 .border-black  { border-color: $black }
 
 .border-gray   { border-color: $gray }
@@ -67,3 +69,5 @@ $black: #111 !default;
 .border-purple  { border-color: $purple }
 
 .border-maroon  { border-color: $maroon }
+
+}
