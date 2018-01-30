@@ -75,7 +75,6 @@ Font Smoothing
 Hover Effects
  */
 @mixin hover-lighten($opacity: 0.85) {
-  -webkit-backface-visibility: hidden;
   @include animate(opacity);
 
   &:hover,

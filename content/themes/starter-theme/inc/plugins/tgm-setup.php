@@ -52,8 +52,8 @@ function _s_register_required_plugins() {
    */
   $staging = array(
     array(
-      'name' => 'Loginizer',
-      'slug' => 'loginizer',
+      'name' => 'Cerber Security & Antispam',
+      'slug' => 'wp-cerber',
       'required' => true,
       'force_activation' => true
     ),
