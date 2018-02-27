@@ -78,7 +78,7 @@ function _s_register_required_plugins() {
       'slug' => 'lj-maintenance-mode',
       'required' => false,
       'force_activation' => false
-    ),    
+    ),
     array(
       'name' => 'W3 Total Cache',
       'slug' => 'w3-total-cache',

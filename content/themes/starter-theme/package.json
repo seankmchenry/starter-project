@@ -1,11 +1,11 @@
 {
-  "name": "_s-starter",
+  "name": "starter-project",
   "version": "1.0.0",
   "author": "Sean McHenry <seankmchenry@gmail.com>",
   "homepage": "https://github.com/seankmchenry",
   "repository": {
     "type": "git",
-    "url": "git@gitlab.com:seankmchenry/_s-starter.git"
+    "url": "git@github.com:seankmchenry/starter-project.git"
   },
   "license": "MIT",
   "devDependencies": {

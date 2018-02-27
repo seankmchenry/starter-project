@@ -29,13 +29,17 @@ add_action( 'login_init', function() {
   add_filter( 'pre_option_users_can_register', '__return_null' );
 } );
 
-/*
-Yoast SEO meta box priority
+/**
+ * Disable changing theme
  */
-function _s_move_yoast_seo_meta() {
-  return 'low';
+function _s_disable_theme_change() {
+  global $submenu;
+  if ( wp_get_current_user()->ID !== 1 ) {
+    unset( $submenu['themes.php'][5] );
+    unset( $submenu['themes.php'][15] );
+  }
 }
-add_filter( 'wpseo_metabox_prio', '_s_move_yoast_seo_meta' );
+add_action( 'admin_init', '_s_disable_theme_change' );
 
 /*
 Remove dashboard widgets
@@ -47,36 +51,14 @@ function _s_remove_dash_widgets() {
 }
 add_action( 'wp_dashboard_setup', '_s_remove_dash_widgets' );
 
-/*
-Add ACF options page
- */
-function _s_add_acf_options_page() {
-  if ( function_exists( 'acf_add_options_page' ) ) {
-    acf_add_options_page();
-  }
-}
-add_action( 'init', '_s_add_acf_options_page' );
-
-/*
-Hide ACF fields dashboard
- */
-function _s_hide_acf_dashboard() {
-  // check if this is my user account
-  if ( wp_get_current_user()->user_login === 'sean' ) {
-    return;
-  }
-  define( 'ACF_LITE' , true );
-}
-add_action( 'admin_init', '_s_hide_acf_dashboard' );
-
 /**
- * Hide update notices for all but me
+ * Hide update notices for all but admins
  */
 function _s_hide_update_notices_all() {
   global $wp_version;
   return(object) array( 'last_checked' => time(), 'version_checked' => $wp_version );
 }
-if ( wp_get_current_user()->user_login !== 'sean' ) {
+if ( !in_array( wp_get_current_user()->user_login, array( 'sean', 'david' ), true ) ) {
   add_filter( 'pre_site_transient_update_core', '_s_hide_update_notices_all' );
   add_filter( 'pre_site_transient_update_plugins', '_s_hide_update_notices_all' );
   add_filter( 'pre_site_transient_update_themes', '_s_hide_update_notices_all' );
@@ -131,6 +113,35 @@ function _s_allow_svg_upload( $mimes ) {
   return $mimes;
 }
 add_filter( 'upload_mimes', '_s_allow_svg_upload', 10, 1 );
+
+/*
+Add ACF options page
+ */
+function _s_add_acf_options_page() {
+  if ( function_exists( 'acf_add_options_page' ) ) {
+    acf_add_options_page();
+  }
+}
+add_action( 'init', '_s_add_acf_options_page' );
+
+/*
+Hide ACF fields dashboard
+ */
+function _s_hide_acf_dashboard() {
+  // check if this is my user account
+  if ( wp_get_current_user()->ID !== 1 ) {
+    define( 'ACF_LITE' , true );
+  }
+}
+add_action( 'admin_init', '_s_hide_acf_dashboard' );
+
+/*
+Yoast SEO meta box priority
+ */
+function _s_move_yoast_seo_meta() {
+  return 'low';
+}
+add_filter( 'wpseo_metabox_prio', '_s_move_yoast_seo_meta' );
 
 /**
  * Show page template in header
