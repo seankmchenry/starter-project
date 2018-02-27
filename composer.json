@@ -1,5 +1,5 @@
 {
-  "name": "seankmchenry/_s-starter",
+  "name": "seankmchenry/starter-project",
   "description": "Starter project for WordPress sites",
   "authors": [
     {
@@ -23,8 +23,9 @@
     "oscarotero/env": "^1.0",
     "roots/wp-password-bcrypt": "1.0.0",
     "roots/soil": "3.7.1",
+    "wpackagist-plugin/advanced-custom-fields": "^5.6.8",
     "wpackagist-plugin/force-regenerate-thumbnails": "^2.0.6",
-    "wpackagist-plugin/imsanity": "^2.3.8"
+    "wpackagist-plugin/wp-smushit": "^2.7.8"
   },
   "extra": {
     "installer-paths": {

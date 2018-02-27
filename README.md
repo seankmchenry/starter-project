@@ -1,2 +1,2 @@
-# _s-starter
+# starter-project
 Starter project for WordPress sites

@@ -12,10 +12,8 @@ function _s_register_required_plugins() {
    */
   $development = array(
     array(
-      'name' => 'Advanced Custom Fields Pro',
-      'slug' => 'advanced-custom-fields-pro',
-      'source' => 'https://github.com/ecmdesign/advanced-custom-fields-pro/archive/master.zip',
-      'external_url' => 'https://github.com/ecmdesign/advanced-custom-fields-pro',
+      'name' => 'Advanced Custom Fields',
+      'slug' => 'advanced-custom-fields',
       'required' => true,
       'force_activation' => true
     ),
@@ -26,14 +24,14 @@ function _s_register_required_plugins() {
       'force_activation' => true
     ),
     array(
-      'name' => 'Imsanity',
-      'slug' => 'imsanity',
+      'name' => 'Simple Page Sidebars',
+      'slug' => 'simple-page-sidebars',
       'required' => true,
       'force_activation' => true
     ),
     array(
-      'name' => 'Simple Page Sidebars',
-      'slug' => 'simple-page-sidebars',
+      'name' => 'Smush Image Compression and Optimization',
+      'slug' => 'wp-smushit',
       'required' => true,
       'force_activation' => true
     ),
@@ -70,20 +68,20 @@ function _s_register_required_plugins() {
    */
   $production = array(
     array(
-      'name' => 'Autoptimize',
-      'slug' => 'autoptimize',
-      'required' => true,
-      'force_activation' => true
-    ),
-    array(
       'name' => 'BackUpWordPress',
       'slug' => 'backupwordpress',
       'required' => true,
       'force_activation' => true
     ),
     array(
-      'name' => 'Cache Enabler',
-      'slug' => 'cache-enabler',
+      'name' => 'Maintenance Mode',
+      'slug' => 'lj-maintenance-mode',
+      'required' => false,
+      'force_activation' => false
+    ),    
+    array(
+      'name' => 'W3 Total Cache',
+      'slug' => 'w3-total-cache',
       'required' => true,
       'force_activation' => true
     ),
