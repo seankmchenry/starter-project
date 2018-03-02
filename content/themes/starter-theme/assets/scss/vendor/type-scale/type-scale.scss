@@ -1,13 +1,8 @@
 /**
  * type-scale.scss
+ *
+ * @link https://type-scale.com
  */
-
-// font size variables
-$h1: 2.074rem;
-$h2: 1.728rem;
-$h3: 1.44rem;
-$h4: 1.2rem;
-$small: 0.833em;
 
 // type styles
 html {
@@ -15,6 +10,9 @@ html {
 
   @include break-md {
     font-size: $md-font-size;
+  }
+  @include break-lg {
+    font-size: $lg-font-size;
   }
 }
 

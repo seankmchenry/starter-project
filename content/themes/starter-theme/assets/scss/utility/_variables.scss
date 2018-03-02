@@ -2,28 +2,45 @@
  * _variables.scss
  */
 
-/*
-Typography
- */
-/* Variables */
-$sans-serif: 'Libre Franklin', sans-serif;
-$serif: Georgia, serif;
+ /*
+ Typography
+  */
+ /* Variables */
+ // font stacks: https://www.cssfontstack.com
+ $sans-serif: 'Source Sans Pro', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+ $serif: Georgia, Times, 'Times New Roman', serif;
 
-/* Definitions */
-$body-font: $sans-serif;
-$heading-font: $sans-serif;
+ /* Definitions */
+ $body-font: $sans-serif;
+ $heading-font: $serif;
 
-/* Sizes */
-$xs-font-size: 15px !default;
-$md-font-size: 16px !default;
+ /* Sizes */
+ // base sizes
+ $xs-font-size: 15px !default;
+ $md-font-size: 16px !default;
+ $lg-font-size: 17px !default;
 
-$btn-font-size: 0.9375rem;
-$body-line-height: 1.45;
+ // buttons
+ $btn-font-size: 0.9375rem;
+ $btn-font-size--small: 0.875rem;
 
-/* Weights */
-$bold-font-weight: 600;
-$normal-font-weight: 400;
-$light-font-weight: 300;
+ // headlines
+ $h1: 2.074rem;
+ $h2: 1.728rem;
+ $h3: 1.44rem;
+ $h4: 1.2rem;
+
+ // small + large
+ $small: 0.833em;
+ $large: 1.125rem;
+
+ /* Line Height */
+ $body-line-height: 1.45;
+
+ /* Weights */
+ $bold-font-weight: 700;
+ $normal-font-weight: 400;
+ $light-font-weight: 300;
 
 /*
 Colors
