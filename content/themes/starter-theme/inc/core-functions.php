@@ -125,15 +125,17 @@ function _s_add_acf_options_page() {
 add_action( 'init', '_s_add_acf_options_page' );
 
 /*
-Hide ACF fields dashboard
+Show ACF fields dashboard for me
  */
-function _s_hide_acf_dashboard() {
+function _s_show_acf_dashboard( $show ) {
   // check if this is my user account
-  if ( wp_get_current_user()->ID !== 1 ) {
-    define( 'ACF_LITE' , true );
+  if ( get_current_user_id() == 1 ) {
+    return true;
+  } else {
+    return false;
   }
 }
-add_action( 'admin_init', '_s_hide_acf_dashboard' );
+add_filter( 'acf/settings/show_admin', '_s_show_acf_dashboard' );
 
 /*
 Yoast SEO meta box priority
